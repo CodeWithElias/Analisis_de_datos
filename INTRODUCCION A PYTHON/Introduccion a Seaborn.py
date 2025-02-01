@@ -16,7 +16,6 @@ sns.scatterplot(x=ladoX, y=ladoY)
 
 pf=pd.read_csv("proyecto_peliculas_netflix\\netflix_data.csv");
 print(pf.head(10))
-
 # Create a count plot with type in the x
 sns.countplot(x="type", data=pf)
 
@@ -26,17 +25,17 @@ sns.scatterplot(x="duration" , y="genre",
                 hue="type",
                 hue_order=["TV Show", "Movie"]
                 )
-
 # Show plot
 plt.show()
 
 # Create a dictionary mapping subgroup values to colors
 palette_colors = {"Movie": "red", "TV Show": "blue"}
-
-# Create a count plot of school with location subgroups
+# Create a count plot of Genre and type
 sns.countplot(x="genre", data=pf,
                 hue="type",
                 palette=palette_colors)
-
 # Display plot
 plt.show()
+
+
+#------------------------ TRAMAS Y SUBTRAMAS RELACIONALES -------------------------------------------
